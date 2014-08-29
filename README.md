@@ -33,7 +33,7 @@ This bundle introduces a new tag to twig:
 Which inlines all ``<script>`` tags and stripts them out afterwards. The result:
 
 ````html
-    <p style="padding: 8px 15px; color: #8E2800; background-color: #FFB03B;">Bananaaa!</p>
+<p style="padding: 8px 15px; color: #8E2800; background-color: #FFB03B;">Bananaaa!</p>
 ```
 
 Nothing more, nothing less. Uses the amazing [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
