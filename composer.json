@@ -1,0 +1,24 @@
+{
+    "name": "eschmar/css-inliner-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "keywords": ["css", "inline", "twig", "symfony"],
+    "description": "Simple twig css inliner for Symfony2.",
+    "homepage": "https://github.com/eschmar/css-inliner-bundle",
+    "authors": [
+        {
+            "name": "Marcel Eschmann",
+            "homepage": "https://github.com/eschmar",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Eschmar\\CssInlinerBundle": "" }
+    },
+    "target-dir": "Eschmar/CssInlinerBundle",
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": "2.5.*",
+        "tijsverkoyen/css-to-inline-styles": "~1.5"
+    }
+}

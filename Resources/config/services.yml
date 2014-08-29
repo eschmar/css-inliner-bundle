@@ -1,0 +1,6 @@
+services:
+    # TWIG EXTENSIONS
+    eschmar.twig.css_inliner_extension:
+        class: Eschmar\CssInlinerBundle\Twig\CssInlinerExtension
+        tags:
+            - { name: twig.extension }
