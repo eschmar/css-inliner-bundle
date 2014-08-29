@@ -10,7 +10,7 @@ Composer (<a href="https://packagist.org/packages/eschmar/css-inliner-bundle" ta
 ```
 
 app/Appkernel.php:
-```yaml
+```php
 new Eschmar\CssInlinerBundle\CssInlinerBundle(),
 ```
 
