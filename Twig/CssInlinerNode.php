@@ -24,7 +24,7 @@ class CssInlinerNode extends \Twig_Node {
      * @return string
      * @author Marcel Eschmann
      **/
-    public function compile() {
+    public function compile(\Twig_Compiler $compiler) {
         $compiler
             ->addDebugInfo($this)
             ->write("ob_start();\n")

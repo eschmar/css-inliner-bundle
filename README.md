@@ -11,7 +11,7 @@ Composer (<a href="https://packagist.org/packages/eschmar/css-inliner-bundle" ta
 
 app/Appkernel.php:
 ```php
-new Eschmar\CssInlinerBundle\CssInlinerBundle(),
+new Eschmar\CssInlinerBundle\EschmarCssInlinerBundle(),
 ```
 
 # Usage
@@ -19,13 +19,13 @@ This bundle introduces a new tag to twig:
 
 ````html
 {% cssinline %}
-    <script>
+    <style>
         p {
             padding: 8px 15px;
             color: #8E2800;
             background-color: #FFB03B;
         }
-    </script>
+    </style>
     <p>Bananaaa!</p>
 {% endcssinline %}
 ```
@@ -33,7 +33,7 @@ This bundle introduces a new tag to twig:
 Which inlines all ``<script>`` tags and strips them out afterwards. The result:
 
 ````html
-<p style="padding: 8px 15px; color: #8E2800; background-color: #FFB03B;">Bananaaa!</p>
+<p style="background-color: #FFB03B; color: #8E2800; padding: 8px 15px;">Bananaaa!</p>
 ```
 
 Nothing more, nothing less. Uses the amazing [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
