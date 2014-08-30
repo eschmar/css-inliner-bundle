@@ -30,7 +30,7 @@ This bundle introduces a new tag to twig:
 {% endcssinline %}
 ```
 
-Which inlines all ``<script>`` tags and stripts them out afterwards. The result:
+Which inlines all ``<script>`` tags and strips them out afterwards. The result:
 
 ````html
 <p style="padding: 8px 15px; color: #8E2800; background-color: #FFB03B;">Bananaaa!</p>
