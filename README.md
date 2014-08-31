@@ -37,3 +37,6 @@ Which inlines all ``<script>`` tags and strips them out afterwards. The result:
 ```
 
 Nothing more, nothing less. Uses the amazing [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
+
+# License
+MIT License. Please check [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles) for its licensing.
