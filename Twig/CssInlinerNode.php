@@ -6,13 +6,13 @@ namespace Eschmar\CssInlinerBundle\Twig;
  * Responsible for processing the current node.
  *
  * @package default
- * @author Marcel Eschmann
+ * @author Marcel Eschmann, @eschmar
  **/
 class CssInlinerNode extends \Twig_Node {
     
     /**
      * @return void
-     * @author Marcel Eschmann
+     * @author Marcel Eschmann, @eschmar
      **/
     public function __construct(\Twig_NodeInterface $body, $lineno, $tag = 'cssinline') {
         parent::__construct(array('body' => $body), array(), $lineno, $tag);
@@ -22,14 +22,19 @@ class CssInlinerNode extends \Twig_Node {
      * Directly outputs the processed node.
      *
      * @return string
-     * @author Marcel Eschmann
+     * @author Marcel Eschmann, @eschmar
      **/
     public function compile(\Twig_Compiler $compiler) {
         $compiler
             ->addDebugInfo($this)
             ->write("ob_start();\n")
             ->subcompile($this->getNode('body'))
-            ->write('echo $context["inliner"](ob_get_clean());' . "\n");
+
+            ->write("\$inliner = new TijsVerkoyen\\CssToInlineStyles\\CssToInlineStyles(); \n")
+            ->write("\$inliner->setHTML(ob_get_clean()); \n")
+            ->write("\$inliner->setUseInlineStylesBlock(); \n")
+            ->write("\$inliner->setStripOriginalStyleTags(); \n")
+            ->write("echo \$inliner->convert(); \n");
     }
 
 } // END class CssInlinerNode extends \Twig_Node
