@@ -14,7 +14,7 @@ class CssInlinerNode extends \Twig_Node {
      * @return void
      * @author Marcel Eschmann, @eschmar
      **/
-    public function __construct(\Twig_NodeInterface $body, $lineno, $tag = 'cssinline') {
+    public function __construct(\Twig_Node $body, $lineno, $tag = 'cssinline') {
         parent::__construct(array('body' => $body), array(), $lineno, $tag);
     }
 
