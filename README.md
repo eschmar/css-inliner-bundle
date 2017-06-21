@@ -3,10 +3,8 @@ Simple twig css inliner for Symfony2 using [CssToInlineStyles](https://github.co
 
 # Installation
 Composer (<a href="https://packagist.org/packages/eschmar/css-inliner-bundle" target="_blank">Packagist</a>):
-```json
-"require": {
-    "eschmar/css-inliner-bundle": "dev-master"
-},
+```sh
+composer require eschmar/css-inliner-bundle ^0.1.0
 ```
 
 app/Appkernel.php:
