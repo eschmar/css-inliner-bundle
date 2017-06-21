@@ -1,5 +1,5 @@
 # CssInlinerBundle
-Simple twig css inliner for Symfony2 using [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
+Simple twig css inliner for Symfony 3 using [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
 
 # Installation
 Composer (<a href="https://packagist.org/packages/eschmar/css-inliner-bundle" target="_blank">Packagist</a>):
@@ -15,7 +15,7 @@ new Eschmar\CssInlinerBundle\EschmarCssInlinerBundle(),
 # Usage
 This bundle introduces a new tag to twig:
 
-````html
+```html
 {% cssinline %}
     <style>
         p {
@@ -30,7 +30,7 @@ This bundle introduces a new tag to twig:
 
 Which inlines all ``<style>`` tags and strips them out afterwards. The result:
 
-````html
+```html
 <p style="background-color: #FFB03B; color: #8E2800; padding: 8px 15px;">Bananaaa!</p>
 ```
 
