@@ -31,10 +31,10 @@ class CssInlinerNode extends \Twig_Node {
             ->subcompile($this->getNode('body'))
 
             ->write("\$inliner = new TijsVerkoyen\\CssToInlineStyles\\CssToInlineStyles(); \n")
-            ->write("\$inliner->setHTML(ob_get_clean()); \n")
+            ->write("\$html = ob_get_clean(); \n")
             ->write("\$inliner->setUseInlineStylesBlock(); \n")
             ->write("\$inliner->setStripOriginalStyleTags(); \n")
-            ->write("echo \$inliner->convert(); \n");
+            ->write("echo \$inliner->convert(\$html); \n");
     }
 
 } // END class CssInlinerNode extends \Twig_Node
