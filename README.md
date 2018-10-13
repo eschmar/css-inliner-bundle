@@ -1,10 +1,10 @@
 # CssInlinerBundle
-Simple twig css inliner for Symfony 3 using [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
+Simple twig css inliner for Symfony 3.4 using [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles).
 
 # Installation
 Composer (<a href="https://packagist.org/packages/eschmar/css-inliner-bundle" target="_blank">Packagist</a>):
 ```sh
-composer require eschmar/css-inliner-bundle ^0.1.0
+composer require eschmar/css-inliner-bundle ^0.2.0
 ```
 
 app/Appkernel.php:
