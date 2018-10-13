@@ -18,7 +18,7 @@
     "target-dir": "Eschmar/CssInlinerBundle",
     "require": {
         "php": ">=7.1.0",
-        "symfony/symfony": ">=4.1.0",
+        "twig/twig": "^2.4.4",
         "tijsverkoyen/css-to-inline-styles": "^2.2.1"
     }
 }
