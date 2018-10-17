@@ -2,8 +2,8 @@
     "name": "eschmar/css-inliner-bundle",
     "license": "MIT",
     "type": "symfony-bundle",
-    "keywords": ["css", "inline", "twig", "symfony"],
-    "description": "Simple twig css inliner for Symfony2.",
+    "keywords": ["css", "inline", "twig", "symfony", "cssinline"],
+    "description": "Simple twig css inliner for Symfony 4.",
     "homepage": "https://github.com/eschmar/css-inliner-bundle",
     "authors": [
         {
