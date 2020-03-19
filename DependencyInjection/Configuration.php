@@ -17,12 +17,13 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('eschmar_css_inliner');
-
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $treeBuilder = new TreeBuilder('eschmar_css_inliner');
+        // BC layer for symfony/config 4.1 and older
+        if (! \method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->root('eschmar_css_inliner');
+        } else {
+            $rootNode = $treeBuilder->getRootNode();
+        }
 
         return $treeBuilder;
     }
