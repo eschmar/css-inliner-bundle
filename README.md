@@ -4,14 +4,18 @@ Simple twig css inliner for Symfony using [CssToInlineStyles](https://github.com
 # Installation
 Composer (<a href="https://packagist.org/packages/eschmar/css-inliner-bundle" target="_blank">Packagist</a>):
 ```sh
-composer require eschmar/css-inliner-bundle ^0.2.0 # Symfony ^3.4
+composer require eschmar/css-inliner-bundle ^2.0.0 # Symfony ^5.0
 
 # or
 
 composer require eschmar/css-inliner-bundle ^1.0.0 # Symfony ^4.1
+
+# or
+
+composer require eschmar/css-inliner-bundle ^0.2.0 # Symfony ^3.4
 ```
 
-app/Appkernel.php:
+app/Appkernel.php (Symfony <4):
 ```php
 new Eschmar\CssInlinerBundle\EschmarCssInlinerBundle(),
 ```
