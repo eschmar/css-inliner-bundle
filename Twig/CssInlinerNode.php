@@ -8,13 +8,13 @@ namespace Eschmar\CssInlinerBundle\Twig;
  * @package default
  * @author Marcel Eschmann, @eschmar
  **/
-class CssInlinerNode extends \Twig_Node {
-    
+class CssInlinerNode extends \Twig\Node\Node {
+
     /**
      * @return void
      * @author Marcel Eschmann, @eschmar
      **/
-    public function __construct(\Twig_Node $body, $lineno, $tag = 'cssinline') {
+    public function __construct(\Twig\Node\Node $body, $lineno, $tag = 'cssinline') {
         parent::__construct(array('body' => $body), array(), $lineno, $tag);
     }
 
@@ -24,7 +24,7 @@ class CssInlinerNode extends \Twig_Node {
      * @return string
      * @author Marcel Eschmann, @eschmar
      **/
-    public function compile(\Twig_Compiler $compiler) {
+    public function compile(\Twig\Compiler $compiler) {
         $compiler
             ->addDebugInfo($this)
             ->write("ob_start();\n")
@@ -35,4 +35,4 @@ class CssInlinerNode extends \Twig_Node {
             ->write("echo \$inliner->convert(\$html); \n");
     }
 
-} // END class CssInlinerNode extends \Twig_Node
+} // END class CssInlinerNode extends \Twig\Node\Node

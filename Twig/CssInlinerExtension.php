@@ -10,7 +10,7 @@ use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
  * @package default
  * @author Marcel Eschmann, @eschmar
  **/
-class CssInlinerExtension extends \Twig_Extension {
+class CssInlinerExtension extends \Twig\Extension\AbstractExtension {
 
     /**
      * Returns the name of the extension.
@@ -25,7 +25,7 @@ class CssInlinerExtension extends \Twig_Extension {
     /**
      * Returns the token parser instances to add to the existing list.
      *
-     * @return array(Twig_Node)
+     * @return array(Twig\Node\Node)
      * @author Marcel Eschmann, @eschmar
      **/
     public function getTokenParsers() {

@@ -8,7 +8,7 @@ namespace Eschmar\CssInlinerBundle\Twig;
  * @package default
  * @author Marcel Eschmann, @eschmar
  **/
-class CssInlinerTokenParser extends \Twig_TokenParser {
+class CssInlinerTokenParser extends \Twig\TokenParser\AbstractTokenParser {
 
     /**
      * Is invoked whenever the parser encounters a cssinline tag.
@@ -16,11 +16,11 @@ class CssInlinerTokenParser extends \Twig_TokenParser {
      * @return CssInlinerNode
      * @author Marcel Eschmann, @eschmar
      **/
-    public function parse(\Twig_Token $token) {
+    public function parse(\Twig\Token $token) {
         //$path = $this->parser->getStream()->expect(Twig_Token::STRING_TYPE)->getValue();
-        $this->parser->getStream()->expect(\Twig_Token::BLOCK_END_TYPE);
+        $this->parser->getStream()->expect(\Twig\Token::BLOCK_END_TYPE);
         $body = $this->parser->subparse(array($this, 'decideCssInlineEnd'), true);
-        $this->parser->getStream()->expect(\Twig_Token::BLOCK_END_TYPE);
+        $this->parser->getStream()->expect(\Twig\Token::BLOCK_END_TYPE);
         return new CssInlinerNode($body, $token->getLine(), $this->getTag());
     }
 
@@ -30,7 +30,7 @@ class CssInlinerTokenParser extends \Twig_TokenParser {
      * @return boolean
      * @author Marcel Eschmann, @eschmar
      **/
-    public function decideCssInlineEnd(\Twig_Token $token) {
+    public function decideCssInlineEnd(\Twig\Token $token) {
         return $token->test('endcssinline');
     }
 
@@ -44,4 +44,4 @@ class CssInlinerTokenParser extends \Twig_TokenParser {
         return 'cssinline';
     }
 
-} // END class CssInlinerTokenParser extends \Twig_TokenParser
+} // END class CssInlinerTokenParser extends \Twig\TokenParser
